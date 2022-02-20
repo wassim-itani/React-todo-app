@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+:root {
+  --bright-blue: hsl(220, 98%, 61%);
+  --vlight-gray: hsl(0, 0%, 98%);
+  --dark-grayish-blue: hsl(236, 23%, 75%);
+  --vdark-blue: hsl(235, 21%, 11%);
+  --vdark-desat-blue: hsl(235, 24%, 19%);
+
+  --main-clr: var(--vdark-desat-blue);
+  --body-bg: var(--vlight-gray);
+  --todo-bg: var(--dark-grayish-blue);
+
+  --font-def: 16px;
+  --font-lg: 32px;
+
+  --transition: 0.2s ease-Out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--body-bg);
+  color: var(--main-clr);
+  font-size: var(--font-def);
+  font-family: "Montserrat", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body.dark {
+  --main-clr: var(--vlight-gray);
+  --body-bg: var(--vdark-blue);
+  --todo-bg: var(--vdark-desat-blue);
 }
 
-.App-link {
-  color: #61dafb;
+.todo-container {
+  max-width: 568px;
+  margin: 50px auto 0px;
+  padding: 0px 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+i {
+  width: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+i:hover {
+  transform: scale(1.2);
+}
+
+ul {
+  list-style-type: none;
 }

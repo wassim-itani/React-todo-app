@@ -1,0 +1,16 @@
+.filter-tab {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-item {
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.filter-item:hover,
+.filter-item.active {
+  color: var(--bright-blue);
+}
