@@ -5,7 +5,6 @@
 A todo app to manage your daily tasks !
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
